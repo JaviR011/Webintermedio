@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de API de Facebook</title>
+</head>
+<body>
+
+<!-- Agrega el SDK de Facebook -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+<script>
+  // Inicializa el SDK de Facebook
+  window.fbAsyncInit = function() {
+    FB.init({
+     // appId      : '894715495445217',   // Identificación única de tu aplicación en Facebook
+     //appId      : '8912387481236478', 
+     appId      : '894715495445217',
+     cookie     : true,
+      xfbml      : true,
+      version    : 'v14.0' // Utiliza la versión más reciente de la Graph API
+    });
+
+  }
+
+  // Llama a la función de inicio de sesión de Facebook
+  function loginWithFacebook() {
+    FB.login(function(response) {}, {scope: 'public_profile,email'}); // Solicita los permisos necesarios
+  }
+</script>
+
+<!-- Botón para iniciar sesión con Facebook -->
+<button onclick="loginWithFacebook()">Iniciar sesión con Facebook</button>
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex; /* Establece el contenedor como un contenedor flex */
+            justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+            align-items: center; /* Alinea los elementos verticalmente al centro */
+            height: 100vh; /* Establece la altura del contenedor al 100% de la altura de la ventana */
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .item {
+            flex: 1; /* Hace que los elementos secundarios ocupen el mismo espacio disponible */
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contenedor principal con elementos secundarios -->
+<div class="container">
+    <div class="item">Elemento 1</div>
+    <div class="item">Elemento 2</div>
+    <div class="item">Elemento 3</div>
+</div>
+
+</body>
+</html>
