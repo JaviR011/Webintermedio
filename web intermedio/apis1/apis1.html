@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenWeatherMap API Example</title>
+    <link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+    <div id="principal">
+    <h1>Pronostico del clima</h1>
+    <label for="cityInput">Cuidad</label>
+    <input type="text" id="cityInput">
+    <button onclick="getWeather()"><img src="icono.png" alt=""></button>
+    <div id="weatherInfo"></div>
+    </div>
+    
+
+    <script>
+        function getWeather() {
+            // Obten tu propia clave de API de OpenWeatherMap
+            const apiKey = 'fb338bc706dba61f3b5c8fc9be664e72';
+
+            // Obten el valor ingresado por el usuario
+            const city = document.getElementById('cityInput').value;
+
+            // Construye la URL de la API
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+            // Realiza la solicitud a la API
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Muestra la información del clima en el elemento weatherInfo
+                    const weatherInfoElement = document.getElementById('weatherInfo');
+                    weatherInfoElement.innerHTML = `<h2>${data.name}</h2>
+                                                    <p id="T">Temperatra: ${data.main.temp} K</p>
+                                                    <p id="D">Descripción: ${data.weather[0].description}</p>`;
+                })
+                .catch(error => {
+                    console.error('Error fetching weather data:', error);
+                });
+        }
+    </script>
+    
+</body>
+</html>
+
+       
+            
+           

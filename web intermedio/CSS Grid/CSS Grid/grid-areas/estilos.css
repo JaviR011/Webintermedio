@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+.grid{
+    width: 90%;
+    max-width: 700px;
+    height: 600px;
+    outline: 3px solid #000;
+    margin: 10px auto;
+    display: grid;
+    /* definimos la grid en el contenedor */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* definimos las áreas */
+    grid-template-areas: 
+    "header header header header header"
+    "sidebar sidebar main main main"
+    "sidebar sidebar main main main"
+    "sidebar sidebar main main main"
+    "footer footer footer footer footer ";
+}
+
+.grid__item{
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    background: crimson;
+    grid-area: header;
+}
+
+.main{
+    background: steelblue;
+    grid-area: main;
+}
+
+.sidebar{
+    background: purple;
+    grid-area: sidebar;
+}
+
+.footer{
+    background: chocolate;
+    grid-area: footer;
+}
+/* cuando el ancho máximo de la pantalla 
+    llegue a 500px la grid cambia y por lo tanto
+    también la posición de los elementos.
+    En este caso solo cambia de posición la 
+    sidebar y el main. */
+@media screen and (max-width:500px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "main main sidebar"
+        "main main sidebar"
+        "footer footer footer";
+    }
+}

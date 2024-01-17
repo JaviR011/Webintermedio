@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    margin:0px;  
+    height:100%;
+    
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    background-color:slategrey;
+    margin:0px;  
+    height:100%;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+header{
+    text-align: center;
+    color: white;
+}
+footer{
+    padding: 3rem 3rem;
+    /* display: flex;
+    justify-content: space-evenly; */
+}
+
+a, a:visited{
+    color:turquoise;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #8c09f8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    
+}

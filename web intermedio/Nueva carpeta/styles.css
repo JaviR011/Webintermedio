@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width:100%;
+    background-color:white;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);/* Define las columnas de la cuadrícula */
+    grid-template-rows: 100px 500px 600px 150px;
+    gap: 1rem; /* Espaciado entre las celdas de la cuadrícula */
+    border: 1px solid black;
+    grid-template-areas: 
+    'head head head head' 
+    '. pg pg .' 
+    '. pc pc1 .' 
+    'f f f f';
+}
+
+.gridh{ 
+    background-color: blueviolet;
+    grid-area: head;
+    display: grid;
+    grid-template-columns:225px 3fr ;
+    gap: 1rem;
+    grid-template-areas: 'logo lista';
+
+}
+.gridf{
+    background-color: blue;
+    grid-area: f;
+    border-bottom: 1rem solid white; 
+}
+.gridpg{
+    background-color: aqua;
+    grid-area: pg;
+}
+.gridpc{
+
+    background-color: black;
+    grid-area: pc;
+}
+.gridpc2{
+    background-color: rgb(178, 49, 49);
+    grid-area: pc1;
+  
+}
+.log{
+    border: 10px solid blueviolet;
+    background-color: brown;
+    grid-area: logo;
+}
+.lista{
+    border: 10px solid blueviolet;
+    background-color: bisque;
+    grid-area: lista;
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0%;
+    border: 40px solid#0000004d;
+    
+    background-color: #000000;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0%;
+    border: 40px solid#0000004d;
+    background-color: #000000;
+}

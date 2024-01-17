@@ -1,0 +1,23 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .brand-logo img{
+   height: 5.3vh;
+ }
+
+ h3,h2{
+   font-family: 'Oswald', sans-serif;
+ }
+
+ nav, footer{
+  background: rgb(60,127,240);
+background: linear-gradient(90deg, rgba(60,127,240,1) 0%, rgba(96,89,238,1) 38%, rgba(97,88,238,1) 38%, rgba(137,45,236,1) 82%);
+}
+
