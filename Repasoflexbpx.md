@@ -48,3 +48,53 @@
 ```
 
 Este es un resumen básico. Flexbox es muy versátil y tiene muchas más propiedades y opciones. La práctica y experimentación son clave para comprender completamente cómo funciona y aprovechar al máximo sus capacidades.
+
+Crear un ejemplo que utilice todas las propiedades de Flexbox puede ser un poco extenso y complejo, ya que depende de la situación específica y los objetivos de diseño. No obstante, puedo proporcionarte un ejemplo sencillo que utiliza varias de las propiedades de Flexbox:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+            background-color: #f0f0f0;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        .item {
+            flex: 1;
+            width: 100px;
+            margin: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <title>Ejemplo de Flexbox</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
+```
+
+En este ejemplo:
+
+- `.container` es el contenedor flex con una dirección de columna (`flex-direction: column`), justificación del contenido alrededor del eje principal (`justify-content: space-around`), alineación de elementos al centro en el eje transversal (`align-items: center`), un fondo gris claro, un borde y un relleno.
+
+- `.item` es un elemento dentro del contenedor con una propiedad de flex (`flex: 1`), un ancho fijo, márgenes, color de fondo azul (`#3498db`), texto blanco (`#fff`), centrado de texto, y un alto fijo.
+
+Este es solo un ejemplo básico, y las propiedades y valores pueden variar según las necesidades específicas del diseño. Puedes experimentar y ajustar estas propiedades según tus requisitos y preferencias.
